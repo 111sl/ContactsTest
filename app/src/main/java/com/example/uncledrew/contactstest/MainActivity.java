@@ -17,6 +17,7 @@ public class MainActivity extends AppCompatActivity {
         Button delete = findViewById(R.id.delete_button);
         Button insert = findViewById(R.id.insert_button);
         Button update = findViewById(R.id.update_button);
+        Button send = findViewById(R.id.send_broad);
 
         select.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -45,8 +46,18 @@ public class MainActivity extends AppCompatActivity {
         update.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(MainActivity.this,Update.class);
+                Intent intent = new Intent(MainActivity.this,GetPhoneMessage.class);
                 startActivity(intent);
+            }
+        });
+
+        send.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent("com.example.broadcasttest.TEST_BRODACAST");
+                //安卓8.0如果不设置包名静态广播不显示
+                intent.setPackage(getPackageName());
+                sendBroadcast(intent);
             }
         });
     }
