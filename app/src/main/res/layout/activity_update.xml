@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".Update">
+
+    <EditText
+        android:id="@+id/old_name"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="输入想更新人的原名字"/>
+
+    <EditText
+        android:id="@+id/new_name"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="输入新名字（或者不更改）"/>
+
+    <EditText
+        android:id="@+id/new_number"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="输入新号码（或者不更改）"/>
+
+    <Button
+        android:id="@+id/update_one"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="确定"/>
+
+</LinearLayout>
