@@ -46,7 +46,7 @@ public class MainActivity extends AppCompatActivity {
         update.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(MainActivity.this,GetPhoneMessage.class);
+                Intent intent = new Intent(MainActivity.this,Update.class);
                 startActivity(intent);
             }
         });

@@ -5,6 +5,7 @@ import android.content.Context;
 import android.content.Intent;
 import android.widget.Toast;
 
+import com.example.uncledrew.contactstest.GetPhoneMessage;
 import com.example.uncledrew.contactstest.Insert;
 
 public class BroadReceiverTest extends BroadcastReceiver {
@@ -16,7 +17,8 @@ public class BroadReceiverTest extends BroadcastReceiver {
             Toast.makeText(context,"自定义广播",Toast.LENGTH_SHORT).show();
         }else if(intent.getAction().equals("android.intent.action.BOOT_COMPLETED")){
             Toast.makeText(context,"开机启动",Toast.LENGTH_SHORT).show();
-            Intent i = new Intent(context,Insert.class);
+            Intent i = new Intent(context,GetPhoneMessage.class);
+            i.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
             context.startActivity(i);
         }
     }
