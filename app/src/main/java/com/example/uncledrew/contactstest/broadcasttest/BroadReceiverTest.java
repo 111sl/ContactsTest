@@ -9,11 +9,11 @@ import com.example.uncledrew.contactstest.GetPhoneMessage;
 import com.example.uncledrew.contactstest.Insert;
 
 public class BroadReceiverTest extends BroadcastReceiver {
-    String SMS_RECEIVED = "com.example.broadcasttest.TEST_BRODACAST" ;
+    String MY_RECEIVED = "com.example.broadcasttest.TEST_BRODACAST" ;
 
     @Override
     public void onReceive(Context context, Intent intent) {
-        if(intent.getAction().equals(SMS_RECEIVED)){
+        if(intent.getAction().equals(MY_RECEIVED)){
             Toast.makeText(context,"自定义广播",Toast.LENGTH_SHORT).show();
         }else if(intent.getAction().equals("android.intent.action.BOOT_COMPLETED")){
             Toast.makeText(context,"开机启动",Toast.LENGTH_SHORT).show();
